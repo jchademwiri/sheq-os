@@ -6,99 +6,108 @@ An open-source, Markdown-based operating system and web platform for Health, Saf
 
 ## 📖 The Vision
 
-The compliance industry is trapped in a maze of static Word files, disconnected SharePoint folders, and outdated PDFs. **SHEQ OS changes that.**
+The compliance industry is still dominated by static Word documents, fragmented SharePoint folders, and unmanaged PDF archives. **SHEQ OS replaces this fragmentation with a structured, version-controlled, and developer-friendly Integrated Management System (IMS).**
 
-We are building a modern, version-controlled, and open-source infrastructure for industry compliance (ISO 9001, ISO 14001, ISO 45001). By treating compliance documentation as **code (Markdown)** and wrapping it in a blazing-fast web framework (Astro), we make Integrated Management Systems (IMS):
+We are building a modern IMS infrastructure for ISO 9001, ISO 14001, and ISO 45001 by treating compliance documentation as **code (Markdown)** and rendering it through a fast, modular web system (Astro).
 
-- Highly searchable  
-- Human-readable  
-- AI-friendly  
-- Infinitely scalable  
+This enables compliance systems that are:
+
 - Version-controlled  
+- AI-readable and AI-generatable  
+- Searchable and structured  
+- Reusable and scalable  
+- Automation-ready (MD → Word/PDF outputs)  
 
 ---
 
-## 🏗️ Core Architecture
+## 🧠 System Overview
 
-SHEQ OS is designed like an operating system, divided into four main pillars that live as pure Markdown content:
+SHEQ OS is not just a document repository. It is a structured IMS framework composed of four interconnected systems:
 
-### 🗄️ Core Library (File System)
-Ready-to-use, version-controlled operational assets including:
-- Templates and forms  
-- Context registers  
-- Process flowcharts  
-- Policies and procedures  
+### 📚 1. Knowledge System (Academy)
+A structured learning environment covering SHEQ fundamentals, ISO standards, and implementation knowledge.
 
-Organized by **knowledge domains**, not rigid ISO clauses.
-
----
-
-### ⚙️ Consultant Playbook (Execution Engine)
-A structured **9-week implementation pipeline** that moves an organisation from:
-
-> Gap Analysis → Leadership Alignment → Risk Mapping → Operational Design → Audit Readiness → Certification
-
----
-
-### 🧠 Academy (Processing Unit)
-Structured learning modules covering:
 - SHEQ fundamentals  
+- ISO 9001 / 14001 / 45001 theory  
 - Risk management  
 - Legal compliance  
-- Continual improvement systems  
-
-Designed as a progressive knowledge system.
-
----
-
-### 👤 Practitioner Path (Roles & Permissions)
-A **10-level competence framework** that:
-- Develops real-world SHEQ capability  
-- Tracks progression through practical deliverables  
-- Uses GitHub commits and artefacts as evidence of learning  
-- Supports auditable skill progression  
+- Internal auditing  
+- Incident investigation  
+- Continuous improvement  
 
 ---
 
-## 📂 Project Structure
+### ⚙️ 2. Execution System (Consultant Playbook)
+A structured implementation methodology that guides organisations through IMS deployment.
 
-We use **Astro** as the frontend engine, with a Markdown-first content system that acts as the “SHEQ Brain”.
+**9-week implementation lifecycle:**
+- Gap Analysis  
+- Leadership & Context  
+- Risk Mapping  
+- Planning & Objectives  
+- Operational Design  
+- Emergency Preparedness  
+- Training & Awareness  
+- Internal Audit  
+- Certification Readiness  
+
+---
+
+### 🗄️ 3. Asset System (Core Library)
+A reusable, version-controlled library of IMS documentation assets:
+
+- Policies  
+- Procedures  
+- Registers  
+- Templates  
+- Flowcharts  
+- Forms  
+
+Organised by **operational domains** rather than strict ISO clauses.
+
+---
+
+### 👤 4. Capability System (Practitioner Path)
+A structured professional development framework that defines progression in SHEQ competence.
+
+Levels include:
+- Student  
+- SHEQ Fundamentals  
+- IMS Practitioner  
+- Internal Auditor  
+- Lead Auditor  
+- SHEQ Consultant  
+- SHEQ Manager  
+- Head of SHEQ  
+- Independent Consultant  
+
+Each level includes:
+- Required knowledge  
+- Practical exercises  
+- Templates to produce  
+- Portfolio evidence requirements  
+- Recommended certifications  
+
+---
+
+## 🏗️ System Architecture
+
+SHEQ OS is built using **Astro** with a Markdown-first content architecture.
 
 ```bash
 sheq-os/
-├── public/                   # 🌍 Static assets (PDFs, downloads, logos)
-├── src/                      # 🚀 Astro application layer
-│   ├── components/          # UI components (Navbar, Sidebar, Search)
-│   ├── layouts/             # Page templates for consistent UX
+├── public/                   # Static assets (PDFs, logos, downloads)
+├── src/
+│   ├── components/          # UI components (navigation, search, layout)
+│   ├── layouts/             # Page structure templates
 │   ├── pages/               # File-based routing system
-│   └── content/             # 🧠 MARKDOWN BRAIN (core system)
+│   └── content/             # 🧠 CORE IMS KNOWLEDGE BASE
 │       │
-│       ├── 01-core-library/  # 🗄️ ISO-aligned operational system
-│       │   ├── 01-context-and-leadership/
-│       │   ├── 02-planning-and-risk/
-│       │   ├── 03-support-and-resources/
-│       │   ├── 04-operations-and-control/
-│       │   ├── 05-emergency-response/
-│       │   ├── 06-performance-evaluation/
-│       │   └── 07-improvement/
-│       │
-│       ├── 02-playbook/      # ⚙️ 9-week execution engine
-│       │   ├── week-1-gap-analysis/
-│       │   ├── week-2-leadership-buy-in/
-│       │   ├── week-3-risk-mapping/
-│       │   ├── week-4-objectives-planning/
-│       │   ├── week-5-operational-design/
-│       │   ├── week-6-emergency-prep/
-│       │   ├── week-7-training-rollout/
-│       │   ├── week-8-internal-audit/
-│       │   └── week-9-certification-prep/
-│       │
-│       ├── 03-academy/       # 🧠 Learning system & practitioner path
-│       │   ├── modules/
-│       │   └── practitioner-path/
-│       │
-│       └── 04-journal/       # 📝 Build-in-public development log
+│       ├── 01-core-library/  # Policies, procedures, templates, registers
+│       ├── 02-playbook/      # 9-week IMS implementation system
+│       ├── 03-academy/       # Learning modules and theory base
+│       └── 04-journal/       # Build-in-public development notes
 │
-├── astro.config.mjs          # Astro configuration
-├── package.json              # Dependencies
-└── README.md                 # Project documentation
+├── astro.config.mjs
+├── package.json
+└── README.md
